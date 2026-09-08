@@ -14,15 +14,11 @@ async function bootstrap() {
       transform: true, // Transforma tipos automáticamente (strings a números, etc.)
     }),
   );
-
+  
   // Prefijo global para la API REST
   app.setGlobalPrefix('api');
 
-  // Lectura del puerto dinámico desde ConfigService / .env
-  const configService = app.get(ConfigService);
-  const port = configService.get<number>('PORT', 3000);
-
-  await app.listen(port);
-  console.log(`🚀 Servidor ejecutándose en http://localhost:${port}/api`);
+  await app.listen(3000);
+  console.log(`🚀 Servidor ejecutándose en http://localhost:3000/api`);
 }
 bootstrap();
