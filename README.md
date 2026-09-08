@@ -165,7 +165,7 @@ El uso de asistentes de IA está permitido durante el desarrollo. La calificaci�
 | :--- | :--- | :--- |
 | **Funcionalidad y Pruebas en Vivo** | **30%** | La API compila, conecta a MySQL, responde en el puerto configurado y pasa las pruebas en Postman sin errores 500. |
 | **Arquitectura de Módulos e Inyección** | **30%** | Correcta configuración de `imports`, `exports`, inyección de servicios y desacoplamiento. |
-| **Sustentación Oral Individual** | **40%** | Explicación técnica de las decisiones de código generadas, decoradores utilizados, flujo de datos y capacidad de realizar ajustes en caliente. |
+| **Sustentación Oral Individual** | **40%** | Explicación técnica de las decisiones de código generadas, decoradores utilizados, flujo de datos y capacidad de realizar ajustes en vivo. |
 
 ---
 
