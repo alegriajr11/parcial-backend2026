@@ -4,9 +4,15 @@ import {
   IsNotEmpty,
   IsOptional,
   IsString,
+  MinLength,
 } from 'class-validator';
 
 export class CreateAsistenteDto {
+  @IsString({ message: 'El código del ticket debe ser una cadena de texto' })
+  @IsNotEmpty({ message: 'El código del ticket es obligatorio' })
+  @MinLength(4, { message: 'El código del ticket debe tener mínimo 4 caracteres' })
+  codigoTicket: string;
+
   @IsString({ message: 'El nombre completo debe ser una cadena de texto' })
   @IsNotEmpty({ message: 'El nombre completo es obligatorio' })
   nombreCompleto: string;

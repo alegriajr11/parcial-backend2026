@@ -22,7 +22,8 @@ export class Asistente {
   @Column({ type: 'varchar', length: 20, nullable: true })
   telefono: string;
 
-  // TODO (Reto del estudiante): Agregar nuevo atributo solicitado en el examen (ej: codigoTicket, edad, etc.)
+  @Column({ type: 'varchar', length: 50, unique: true })
+  codigoTicket: string;
 
   @ManyToOne(() => Evento, (evento) => evento.asistentes, {
     onDelete: 'CASCADE',
