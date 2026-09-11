@@ -18,7 +18,10 @@ async function bootstrap() {
   // Prefijo global para la API REST
   app.setGlobalPrefix('api');
 
-  await app.listen(3000);
-  console.log(`🚀 Servidor ejecutándose en http://localhost:3000/api`);
+  const configService = app.get(ConfigService);
+  const port = configService.get<number>('PORT') || 4000;
+
+  await app.listen(port);
+  console.log(`🚀 Servidor ejecutándose en http://localhost:${port}/api`);
 }
 bootstrap();
